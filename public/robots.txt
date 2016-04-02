@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /*_openstat
+Disallow: /*from=adwords
+Disallow: /*utm_source
+
+Host: https://ryfma.ru
+Sitemap: https://ryfma.ru/sitemap.xml.gz

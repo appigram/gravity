@@ -1,13 +1,24 @@
 <template name="header">
   <header class="main-header">
-    <div class="container">
+    <div class="navigation">
       <ul>
         <li>
           <a href="/">
-            <img class="logo" src="/img/logo-gravity.png" alt="Gravity Logo" />
+            <img class="logo" src="https://cdnryfma.s3.amazonaws.com/defaults/logo.png" alt="Ryfma Logo" />
           </a>
         </li>
+        {{> navigation}}
+
         {{#if currentUser}}
+          <li class="u-pull-right sign-out">
+            <i class="icon ion-ios-bell"></i>
+          </li>
+          <li class="u-pull-right new-post">
+            <a href="/submit">Новая запись</a>
+          </li>
+          <li class="u-pull-right notifications">
+            <i class="icon ion-ios-bell"></i>
+          </li>
           <li class="u-pull-right sign-out">
             <button data-id="sign-out"><i class="fa fa-sign-out fa-lg"></i></button>
           </li>

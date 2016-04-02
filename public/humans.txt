@@ -1,0 +1,6 @@
+/* team */
+- сысманов евгений
+- шибеева полина
+
+/* site */
+Standards: Javascript, Meteor, MongoDB, Nginx

@@ -100,5 +100,15 @@ Template.feed.events({
 
   'submit [data-id=search-posts-form]': (event, template) => {
     event.preventDefault();
-  }
+  },
+  
+  'keyup [data-id=search-query]': _.debounce((event, template) => {
+    event.preventDefault();
+    template.searchQuery.set(template.find('[data-id=search-query]').value);
+    template.limit.set(20);
+  }, 300),
+
+  'submit [data-id=search-posts-form]': (event, template) => {
+    event.preventDefault();
+  }    
 });

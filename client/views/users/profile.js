@@ -23,11 +23,20 @@ Template.profile.onCreated(function () {
   this.userPostsCount = new ReactiveVar(0);
 
   this.autorun(() => {
-    this.subscribe('users.profile', FlowRouter.getParam('_id'), this.limit.get());
+    this.subscribe('users.profile', FlowRouter.getParam('_id'), this.limit.get() );
     this.userPostsCount.set(Counts.get('users.profile'));
 
     // Get current user's social media accounts
     let profileUser = Meteor.users.findOne({_id: FlowRouter.getParam('_id')});
+
+    /*SEO.set({
+      title: profileUser.name,
+      description: profileUser.description,
+      meta: {
+        'property="og:image"': profileUser.image,
+        'name="twitter:image"': profileUser.image
+      }
+    });*/
 
     // Display social media links
     if (profileUser && profileUser.socialMedia) {
