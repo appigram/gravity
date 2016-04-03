@@ -12,7 +12,7 @@
 
 .at-btn.submit {
   color: #FFF;
-  background-color: #33C3F0 !important;
+  background-color: $main !important;
   outline: 0px none;
   display: inline-block;
   width: 100%;
@@ -28,10 +28,10 @@
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid #33C3F0;  cursor: pointer;
+  border: 1px solid $main;  cursor: pointer;
   box-sizing: border-box;
 }
 .at-error {
   text-align: center;
-  color: #D43939;
+  color: $red;
 }

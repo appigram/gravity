@@ -5,7 +5,7 @@
   margin: 0 auto;  
 }
 body {
-  background-color: #fafafa;
+  background-color: $grey-light;
 }
 
 a {
@@ -49,13 +49,13 @@ a {
 }
 
 .button-danger {
-  background: #DB1E1E;
-  color: #FFFFFF;
-  border-color: #DB1E1E;
+  background: $red;
+  color: $white;
+  border-color: $red-dark;
   &:hover, &:focus {
-    color: #FFFFFF;
-    background: darken(#DB1E1E, 10%);
-    border-color: darken(#DB1E1E, 10%);
+    color: $white;
+    background: darken($red, 10%);
+    border-color: darken($red, 10%);
   }
 }
 

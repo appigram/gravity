@@ -1,6 +1,6 @@
 .post {
   padding: 10px;
-  border: 1px solid #EEEEEE;
+  border: 1px solid $grey-light;
   overflow-wrap: break-word;
   word-wrap: break-word;
   hr {
@@ -17,7 +17,7 @@
     margin-right: 5px;
   }
   .highlight-username {
-    background: #FFEDCA;
+    background: $grey;
   }
   margin-bottom: 20px;
 }
@@ -70,7 +70,7 @@ textarea {
   input[type="submit"].disabled:hover {
     opacity: 0.3;   
     cursor: default;
-    background-color: #33C3F0;
-    border-color: #33C3F0;
+    background-color: $main;
+    border-color: $main;
   }
 }

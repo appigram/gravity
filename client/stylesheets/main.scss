@@ -1,13 +1,16 @@
-@import './ionicons/ionicons';
+@import "ionicons/ionicons";
+@import "./skeleton/normalize";
+@import "./skeleton/skeleton";
 
-@import 'base/base';
+@import "./base/variables";
+@import "./base/base";
 
-@import 'modules/header';
-@import 'modules/navigation';
-@import 'modules/posts';
-@import 'modules/users';
-@import 'modules/footer';
-@import 'modules/messages';
+@import "./modules/header";
+@import "./modules/navigation";
+@import "./modules/posts";
+@import "./modules/users";
+@import "./modules/footer";
+@import "./modules/messages";
 
 // keep it at the bottom
-@import 'modules/useraccounts';
+@import "./modules/useraccounts";

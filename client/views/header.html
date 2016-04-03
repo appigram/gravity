@@ -1,15 +1,34 @@
 <template name="header">
   <header class="main-header">
-    <div class="navigation">
-      <ul>
+    <div class="row">
+      <ul class="three columns">
         <li>
           <a href="/">
             <img class="logo" src="https://cdnryfma.s3.amazonaws.com/defaults/logo.png" alt="Ryfma Logo" />
           </a>
         </li>
-        {{> navigation}}
+        <li class="{{activeIfRouteNameIs 'feed'}}">
+          <a href="{{pathFor 'feed'}}"><i class="fa fa-newspaper-o"></i> New</a>
+        </li>
+        <li class="{{activeIfRouteNameIs 'browseUsers'}}">
+          <a href="{{pathFor 'browseUsers'}}"><i class="fa fa-users"></i> Users</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-users"></i> Classic</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-users"></i> Help</a>
+        </li>
+      </ul>
 
-        {{#if currentUser}}
+      <ul class="six columns">
+        <form class="search-posts-form" data-id="search-posts-form">
+          <input type="text" class="u-full-width" placeholder="Search posts..." data-id="search-query">
+        </form>
+      </ul>
+
+      {{#if currentUser}}
+        <ul class="three columns">
           <li class="u-pull-right sign-out">
             <i class="icon ion-ios-bell"></i>
           </li>
@@ -19,11 +38,34 @@
           <li class="u-pull-right notifications">
             <i class="icon ion-ios-bell"></i>
           </li>
-          <li class="u-pull-right sign-out">
-            <button data-id="sign-out"><i class="fa fa-sign-out fa-lg"></i></button>
+          <li class="u-pull-right notifications">
+            <i class="icon ion-ios-bell"></i>
+            <ul>
+              <li class="{{activeIfRouteNameIs 'messages'}}">
+                <a href="{{pathFor 'messages'}}"><i class="fa fa-envelope"></i> Messages {{getUnreadCount}}</a>
+              </li>    
+              <li class="{{activeIfRouteNameIs 'following'}}">
+                <a href="{{pathFor 'following'}}"><i class="fa fa-arrow-left"></i> <i class="fa fa-user"></i> Following</a>
+              </li>
+              <li class="{{activeIfRouteNameIs 'follower'}}">
+                <a href="{{pathFor 'follower'}}"><i class="fa fa-arrow-right"></i> <i class="fa fa-user"></i> Followers</a>
+              </li>
+              <li class="{{activeIfRouteNameIs 'updateProfile'}}">
+                <a href="{{pathFor 'updateProfile'}}"><i class="fa fa-cogs"></i> Settings</a>
+              </li>
+              <li class="u-pull-right sign-out">
+                <button data-id="sign-out"><i class="fa fa-sign-out fa-lg"></i></button>
+              </li>
+            </ul>
           </li>
-        {{/if}}
-      </ul>
+        </ul>
+      {{else}}
+        <ul class="three columns">
+          <li class="u-pull-right sign-out">
+            <i class="icon ion-ios-bell"></i>
+          </li>
+        </ul>
+      {{/if}}
     </div>
   </header>
 </template>

@@ -1,6 +1,6 @@
 #allMessagesArea,
 #singleMessageContainer {
-  border: 1px solid #D1D1D1;
+  border: 1px solid $grey-light;
   border-radius: 4px;
   box-shadow: none;
   min-width: 200px;
@@ -88,13 +88,13 @@
   }
   &.left { 
     p {
-      border: 1px solid #cfcfcf;
+      border: 1px solid $grey-light;
       float: left;
     }
   }
   &.right {
     p {
-      background-color: #cfcfcf;      
+      background-color: $grey-light;      
       float: right;
     }
   }
@@ -144,8 +144,8 @@ td {
   [data-id="reply-submit"].disabled:hover {
     opacity: 0.3;   
     cursor: default;
-    background-color: #33C3F0;
-    border-color: #33C3F0;
+    background-color: $main;
+    border-color: $main;
   }
 }
 
@@ -163,7 +163,7 @@ td {
   [data-id="message-submit"].disabled:hover {
     opacity: 0.3;   
     cursor: default;
-    background-color: #33C3F0;
-    border-color: #33C3F0;
+    background-color: $main;
+    border-color: $main;
   }
 }
