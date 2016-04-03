@@ -24,8 +24,25 @@
 
 form.search-posts-form {
   margin-bottom: 0;
+  position: relative;  
   input {
     margin-bottom: 0;
+    vertical-align: middle;
+    padding-left: 36px;
+    display: inline-block; 
+  }
+  i {
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    left: 14px;
+    top: 3px;
+    font-size: 2.2rem;
+    color: rgba(0,0,0,.3);
+    cursor: pointer;    
   }
 }
 

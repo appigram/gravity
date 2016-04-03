@@ -4,37 +4,89 @@ header.main-header {
   height: 6rem;
   background: $white;
   z-index: 99;
-  border-top: 1px solid $grey-light;
-  border-bottom: 1px solid $grey-light;
+  border-bottom: 1px solid $grey;
   margin-bottom: 20px;
-  ul {
-    list-style: none;
-    margin-bottom: 0;
-    li {
-      position: relative;
-      float: left;
+  form, a {
+    line-height: 6rem;
+  }
+  form {
+    float: left;
+    width: 80%;
+  }
+  .logo {
+    padding-top: 16px;
+  }
+  .right-top-menu {
+    text-align: right;
+    ul{
+      list-style: none;
       margin-bottom: 0;
-      margin-right: 10px;
-      button {
-        border: 0;
-        padding: 0;
-        line-height: 6rem;
+      li {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 24px;
+        height: 6rem;        
+        .button {
+          border: 0;
+          padding: 0;
+          i {
+            font-weight: bold;
+            border-radius: 100%;
+            background: $main;
+            color: $white;
+            padding: 0.6rem 1rem;
+          }
+        }
+        a {
+          text-transform: uppercase;
+          font-size: 2.5rem;
+          text-decoration: none;
+          color: $grey;
+        }
+      }
+    }
+    .notifications {
+      .menu {
+        right: -2.4rem!important;
+      }
+    }
+    .user-menu {
+      margin: 0;
+      .text {
+        .image {
+          margin: 0;
+          margin-top: -7px;
+          font-size: 2rem;
+        }
       }
       a {
-        text-transform: uppercase;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: .2rem;
+        text-transform: none;
         text-decoration: none;
-        line-height: 6rem;
-        color: $text;
+        color: $main;
       }
     }
-    li.u-pull-right {
-      float: right;
-    }
-    li.sign-out {
-      margin-right: 0;
+  }
+  .divider {
+    margin: 0.2em 0em!important;
+  }
+  .menu {
+    margin: 1rem 0 0 0!important;
+    padding: 0.2em 0em!important;
+    right: -17%!important;
+    .item {
+      height: 2.5rem!important;
+      line-height: 2.5rem!important;
+      width: 120px;
+      &:hover {
+        background-color: $main-light!important;
+      }
+      a {
+        line-height: 3rem;
+        color: $text;
+        font-weight: 100;
+        font-size: 1.5rem;
+      }
     }
   }
 }

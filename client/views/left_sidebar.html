@@ -4,14 +4,17 @@
       <div class="navigation">
         <ul>
           <li class="">
-            <a href="#"><i class="fa fa-newspaper-o"></i> Feed</a>
+            <a href="{{pathFor 'feed'}}"><i class="fa fa-newspaper-o"></i> New</a>
           </li>
           <li class="">
-            <a href="#"><i class="fa fa-users"></i> Browse users</a>
+            <a href="{{pathFor 'browseUsers'}}"><i class="fa fa-users"></i> Users</a>
           </li>
-          <li class="">
-            <a href="#"><i class="fa fa-envelope"></i> Messages {{getUnreadCount}}</a>
-          </li>    
+          <li>
+            <a href="#"><i class="fa fa-users"></i> Classic</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-users"></i> Help</a>
+          </li>
         </ul>
       </div>
     </div>

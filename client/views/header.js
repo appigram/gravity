@@ -6,6 +6,10 @@ Template.header.onCreated(function() {
   });
 });
 
+Template.header.onRendered(function(){
+  $('.ui.dropdown').dropdown();
+});
+
 Template.header.helpers({
   activeIfRouteNameIs: (routeName) => {
     if (FlowRouter.getRouteName() === routeName) {
@@ -40,5 +44,9 @@ Template.header.events({
         FlowRouter.go('/sign-in');
       }
     });
+  },
+  'click [data-id=search-icon]': function() {
+  	$(".main-header [data-id=search-query").focus()
   }
+
 });
